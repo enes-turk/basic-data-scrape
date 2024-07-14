@@ -3,20 +3,12 @@ from bs4 import BeautifulSoup
 import csv
 
 def scrape_website(url):
-    # Send a GET request to the URL
-    response = requests.get(url)
+    response = requests.get(url) # GET request to the URL
     
-    # Check if the request was successful
     if response.status_code == 200:
-        # Parse the HTML content
         soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Extract data (example: all paragraph texts)
         paragraphs = soup.find_all('p')
-        
-        # Prepare data for storage
         data = [p.text for p in paragraphs]
-        
         return data
     else:
         print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
@@ -25,7 +17,7 @@ def scrape_website(url):
 def save_to_csv(data, filename):
     with open(filename, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['Paragraph Text'])  # Header
+        writer.writerow(['Paragraph Text'])  # header
         for item in data:
             writer.writerow([item])
 
@@ -34,7 +26,7 @@ def ask_input():
   return url
 
 def main():
-    url = str(ask_input())  # Replace with the actual URL you want to scrape
+    url = str(ask_input())
     filename = "scraped_data.csv"
     
     print("Starting web scraping...")
