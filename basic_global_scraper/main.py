@@ -40,7 +40,7 @@ def scrape_website(url):
 def save_to_csv(data, filename):
   with open(f'scrapes/{filename}', 'w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
-    writer.writerow(['Element', 'Type', 'Content', 'Order'])  # header
+    writer.writerow(['Element', 'Type', 'Content', 'Order'])  # headers
     for index, row in data.iterrows():
       writer.writerow(row)
 
