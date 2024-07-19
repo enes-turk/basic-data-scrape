@@ -45,7 +45,7 @@ def save_to_csv(data, filename):
       writer.writerow(row)
 
 def main():
-  url = "https://www.example.com/"  # Replace with the URL you want to scrape
+  url = "https://www.nesine.com/iddaa?et=1&ocg=MS-2%2C5&gt=Pop%C3%BCler"  # Replace with the URL you want to scrape
   result = scrape_website(url)
   
   print("Starting web scraping...")

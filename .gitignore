@@ -1,3 +1,4 @@
 scrapes/
 .gitattributes
 e-commerce_scraper/
+movie-scraper/scripts/
