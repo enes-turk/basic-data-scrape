@@ -77,7 +77,7 @@ class ScriptScraper:
     def save_script(self, script, title):
         try:
             title = "".join(c for c in title if c.isalnum() or c in (' ', '-', '_')).rstrip()
-            with open(f"movie-scraper/scripts/{title}.txt", "w", encoding="utf-8") as f:
+            with open(f"scripts/{title}.txt", "w", encoding="utf-8") as f:
                 f.write(script)
         except IOError as e:
             print(f"Error saving script {title}: {e}")
