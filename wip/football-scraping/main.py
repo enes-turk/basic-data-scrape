@@ -8,7 +8,7 @@ import time
 website = "https://www.adamchoi.co.uk/overs/detailed"
 
 # Specify the path to your ChromeDriver executable
-chromedriver_path = r"wip\football-scraping\chromedriver-win64\chromedriver.exe"
+chromedriver_path = r"wip\chromedriver-win64\chromedriver.exe"
 
 service = Service(chromedriver_path)
 driver = webdriver.Chrome(service=service)
